@@ -1,21 +1,14 @@
 {
   "compilerOptions": {
     "target": "es2021",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["es5", "dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "typeRoots": [
-      "./src/@types",
-      "./node_modules/@types"
-    ],
+    "typeRoots": ["./src/@types", "./node_modules/@types"],
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
@@ -24,22 +17,7 @@
     "baseUrl": "src",
     "incremental": true
   },
-  "include": [
-    "src",
-    "**/*.ts",
-    "**/*.tsx"
-  ],
-  "exclude": [
-    "node_modules"
-  ],
-  "moduleResolution": [
-    "node_modules",
-    ".next",
-    "node"
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
+  "include": ["src", "**/*.ts", "**/*.tsx", "tailwind.config.ts"],
+  "exclude": ["node_modules"],
+  "moduleResolution": ["node_modules", "node"]
 }

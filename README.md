@@ -13,15 +13,14 @@ Live demo - [open]() //Soon
 
 - React
 - Typescript
-- Styled components
 - Formik
 - Yup
 
 ## Naming Convention
 
-We will use a **kebab-case**. Kebab case is a programming variable naming convention where a developer replaces the spaces between words with a dash.
+We will use a **PascalCase**. Pascal case is a programming variable naming convention where the first letter of each compound word in a variable is capitalized.
 
-Here are some examples of kebab case: `component-name.tsx` and `other-component.tsx`.
+Here are some examples of kebab case: `ComponentName.tsx` and `OtherComponent.tsx`.
 
 ## Directory Structure
 
