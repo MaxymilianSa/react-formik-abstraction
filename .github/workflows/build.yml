@@ -1,0 +1,19 @@
+name: Build app
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Install dependencies
+        run: yarn
+      - name: Run build
+        run: yarn build
