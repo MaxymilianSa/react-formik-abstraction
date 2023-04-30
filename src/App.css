@@ -4,17 +4,24 @@
 
 :root {
   /* #region  /**=========== Global colors =========== */
-  --color-denim: 2, 41, 89; /* #022959 */
-  --color-grey: 150, 153, 170; /* #9699aa */
-  --color-purple: 72, 62, 255; /* #483eff */
-  --color-very-light-grey: 247, 248, 255; /* #f7f8ff */
-  --color-white: 255, 255, 255; /* #ffffff */
+  --color-denim: 2 41 89; /* #022959 */
+  --color-grey: 150 153 170; /* #9699aa */
+  --color-purple: 72 62 255; /* #483eff */
+  --color-very-light-grey: 247 248 255; /* #f7f8ff */
+  --color-white: 255 255 255; /* #ffffff */
+  --color-sky-blue: 190 226 253; /* #BEE2FD */
+  --color-background: 239 245 255; /* #EFF5FF */
 
   --color-primary: var(--color-denim);
   /* #endregion  /**======== Global colors =========== */
 }
 
 @layer base {
+  body {
+    @apply bg-background;
+    min-height: 100vh;
+  }
+
   .h0 {
     @apply font-primary text-xl font-bold;
   }

@@ -1,5 +1,11 @@
+import { Layout } from '@/Layout/Layout';
+
 import './App.css';
 
-const App = () => <h1 className="text-denim">Form abstraction</h1>;
+const App = () => (
+  <div className="lg:flex lg:py-28 justify-center">
+    <Layout />
+  </div>
+);
 
 export default App;
