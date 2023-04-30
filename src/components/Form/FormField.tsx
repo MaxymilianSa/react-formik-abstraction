@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
+import { clsxm } from '@lib/clsxm';
 import { useFormikContext } from 'formik';
-import { clsxm } from 'lib/clsxm';
 
 type FormFieldType = {
   className?: string;
