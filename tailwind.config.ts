@@ -13,6 +13,7 @@ export default {
       'very-light-grey': 'rgb(var(--color-very-light-grey) / <alpha-value>)',
       white: 'rgb(var(--color-white) / <alpha-value>)',
       'sky-blue': 'rgb(var(--color-sky-blue) / <alpha-value>)',
+      'light-blue': 'rgb(var(--color-light-blue) / <alpha-value>)',
       background: 'rgb(var(--color-background) / <alpha-value>)',
       error: 'rgb(var(--color-error) / <alpha-value>)',
       success: 'rgb(var(--color-success) / <alpha-value>)',

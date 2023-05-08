@@ -10,6 +10,7 @@
   --color-very-light-grey: 247 248 255; /* #f7f8ff */
   --color-white: 255 255 255; /* #ffffff */
   --color-sky-blue: 190 226 253; /* #BEE2FD */
+  --color-light-blue: 171 188 255; /* #ABBCFF */
   --color-background: 239 245 255; /* #EFF5FF */
 
   --color-primary: var(--color-denim);
