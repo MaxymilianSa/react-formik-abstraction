@@ -12,6 +12,8 @@
   --color-sky-blue: 190 226 253; /* #BEE2FD */
   --color-light-blue: 171 188 255; /* #ABBCFF */
   --color-background: 239 245 255; /* #EFF5FF */
+  --color-border-color: 214 217 230; /* #D6D9E6 */
+  --color-red-errors: 238 55 74; /* #EE374A */
 
   --color-primary: var(--color-denim);
   /* #endregion  /**======== Global colors =========== */

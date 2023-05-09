@@ -23,14 +23,11 @@ export const Actions = ({ className }: ActionsProps) => {
       )}
     >
       {active > 0 ? (
-        <Button type="button" variant="clear" handleClick={() => countStep('prev')}>
+        <Button type="button" variant="clear" onClick={() => countStep('prev')}>
           Go Back
         </Button>
       ) : null}
-      <Button
-        type={active === lastStep ? 'submit' : 'button'}
-        handleClick={() => countStep('next', 3)}
-      >
+      <Button type={active === lastStep ? 'submit' : 'button'} onClick={() => countStep('next', 3)}>
         Next Step
       </Button>
     </div>

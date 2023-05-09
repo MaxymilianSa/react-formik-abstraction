@@ -1,6 +1,6 @@
-import { Step } from '@components/Step/Step';
 import { StepsProvider } from '@providers/StepsProvider';
 
+import { Content } from '@/components/Content/Content';
 import { Layout } from '@/components/Layout/Layout';
 
 import './App.css';
@@ -8,7 +8,7 @@ import './App.css';
 const App = () => (
   <StepsProvider>
     <Layout>
-      <Step />
+      <Content />
     </Layout>
   </StepsProvider>
 );

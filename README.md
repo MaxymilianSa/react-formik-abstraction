@@ -8,6 +8,7 @@ Live demo - [open]() //Soon
 - [Naming Convention](#naming-convention)
 - [Directory Structure](#directory-structure)
 - [Install project](#install-project)
+- [Todos](#todos)
 
 ## Technologies Used
 
@@ -40,3 +41,7 @@ Here are some examples of kebab case: `ComponentName.tsx` and `OtherComponent.ts
 1. Clone repository
 2. Run `yarn` to install project dependencies.
 3. Run `yarn start` to run dev server or `yarn build` for production purposes.
+
+## Todos
+
+1. Add phone input variant
