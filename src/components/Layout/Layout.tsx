@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react';
-import { steps } from '@lib/data';
+import { steps } from '@/const/formData';
 
 import { Actions } from '@/components/Layout/components/Actions';
 import { clsxm } from '@/lib/clsxm';

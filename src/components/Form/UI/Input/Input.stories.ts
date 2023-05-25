@@ -1,5 +1,6 @@
-import Input from '@components/Form/UI/Input/Input';
 import type { Meta } from '@storybook/react';
+
+import Input from './Input';
 
 const meta: Meta<typeof Input> = {
   title: 'Input',
