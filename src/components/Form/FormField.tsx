@@ -27,9 +27,15 @@ export const FormField = ({ children, name, id, label, className }: FormFieldTyp
 
   return (
     <div className={clsxm('flex flex-col gap-2', className)}>
-      {label ? <label htmlFor={id}>{label}</label> : null}
+      <div className="flex justify-between items-center">
+        {label ? (
+          <label className="text-denim" htmlFor={id}>
+            {label}
+          </label>
+        ) : null}
+        {error ? <p className="text-xs text-red-errors font-bold">test</p> : null}
+      </div>
       {children}
-      {error ? <p className="text-xs text-error -mt-2">{error}</p> : null}
     </div>
   );
 };

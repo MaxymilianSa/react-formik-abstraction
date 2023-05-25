@@ -15,8 +15,8 @@ export default {
       'sky-blue': 'rgb(var(--color-sky-blue) / <alpha-value>)',
       'light-blue': 'rgb(var(--color-light-blue) / <alpha-value>)',
       background: 'rgb(var(--color-background) / <alpha-value>)',
-      error: 'rgb(var(--color-error) / <alpha-value>)',
-      success: 'rgb(var(--color-success) / <alpha-value>)',
+      'border-color': 'rgb(var(--color-border-color) / <alpha-value>)',
+      'red-errors': 'rgb(var(--color-red-errors) / <alpha-value>)',
     },
     extend: {
       fontFamily: {

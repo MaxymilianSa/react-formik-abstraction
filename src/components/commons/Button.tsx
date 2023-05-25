@@ -1,13 +1,11 @@
-import { PropsWithChildren } from 'react';
+import { ComponentProps, PropsWithChildren } from 'react';
 
 import { clsxm } from '@/lib/clsxm';
 
 export type ButtonProps = PropsWithChildren & {
   className?: string;
-  handleClick: () => void;
-  type: 'submit' | 'button';
   variant?: keyof typeof buttonVariants;
-};
+} & ComponentProps<'button'>;
 
 const buttonVariants = {
   primary: 'border-none bg-denim rounded px-4 h-10 text-white text-sm font-medium',
@@ -15,14 +13,8 @@ const buttonVariants = {
   clear: 'border-none bg-transparent h-10 text-grey text-sm font-medium',
 } as const;
 
-export const Button = ({
-  type,
-  className,
-  variant = 'primary',
-  children,
-  handleClick,
-}: ButtonProps) => (
-  <button {...{ className: clsxm(buttonVariants[variant], className), type, onClick: handleClick }}>
+export const Button = ({ className, variant = 'primary', children, ...props }: ButtonProps) => (
+  <button {...{ className: clsxm(buttonVariants[variant], className), ...props }}>
     {children}
   </button>
 );
