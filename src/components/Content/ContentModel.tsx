@@ -6,6 +6,7 @@ export const initialValues = {
   email: '',
   phone: '',
   plan: 'arcade',
+  duration: '0',
 };
 
 export const stepsComponent = [
