@@ -21,7 +21,7 @@ const RadioBox = ({
   <label
     id={name}
     className={clsxm(
-      'w-full py-5 px-4 flex flex-row gap-4 items-center border border-border-color rounded-lg cursor-pointer bg-white',
+      'w-full py-5 px-4 flex flex-row gap-4 items-center border border-border-color rounded-lg cursor-pointer bg-white hover:border-purple hover:bg-very-light-grey transition-colors',
       'lg:flex-col lg:justify-start lg:items-start lg:gap-10',
       props.checked && 'border-purple bg-very-light-grey',
       className,
