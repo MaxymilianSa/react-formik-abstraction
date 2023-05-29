@@ -1,3 +1,4 @@
+import { AddonType } from '@/@types/addon';
 import { PlanType } from '@/@types/plan';
 
 import { ReactComponent as AdvancedIcon } from '~/svg/advanced.svg';
@@ -66,5 +67,32 @@ export const planOptions: PlanType[] = [
       price_per_year: 150,
     },
     comment: '2 months free',
+  },
+];
+
+export const addonOptions: AddonType[] = [
+  {
+    name: 'Online service',
+    description: 'Access to multiplayer games',
+    price: {
+      per_month: 1,
+      per_year: 10,
+    },
+  },
+  {
+    name: 'Larger storage',
+    description: 'Extra 1TB of cloud save',
+    price: {
+      per_month: 2,
+      per_year: 20,
+    },
+  },
+  {
+    name: 'Customizable Profile',
+    description: 'Custom theme on your profile',
+    price: {
+      per_month: 2,
+      per_year: 20,
+    },
   },
 ];
