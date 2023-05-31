@@ -7,10 +7,8 @@ import { planOptions } from '@/const/formData';
 export const SelectPlan = () => {
   const { values }: FormikContextType<FormikValues> = useFormikContext();
 
-  const durationClassName = (type: 'mo' | 'yr') =>
-    values.duration && type === 'yr'
-      ? 'text-denim text-sm font-medium'
-      : 'text-grey text-sm font-medium';
+  const durationClassName = (isActive: boolean) =>
+    isActive ? 'text-denim text-sm font-medium' : 'text-grey text-sm font-medium';
 
   return (
     <div className="w-full flex flex-col gap-6">
@@ -29,9 +27,9 @@ export const SelectPlan = () => {
         ))}
       </div>
       <div className="bg-very-light-grey w-full h-12 rounded-lg flex justify-center items-center gap-6">
-        <p className={durationClassName('mo')}>Monthly</p>
+        <p className={durationClassName(values.duration === '0')}>Monthly</p>
         <SwitchButton name="duration" />
-        <p className={durationClassName('yr')}>Yearly</p>
+        <p className={durationClassName(values.duration === '1')}>Yearly</p>
       </div>
     </div>
   );
