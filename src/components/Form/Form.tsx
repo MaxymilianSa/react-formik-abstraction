@@ -1,21 +1,20 @@
-import { FormikProvider, FormikValues } from 'formik';
-import { ComponentProps } from 'react';
-import { useYupForm, useYupFormType } from './useForm';
-import { Schema } from 'Yup';
+import { PropsWithChildren } from 'react';
+import { FormikContextType, FormikProvider, FormikValues } from 'formik';
 
-const Form = <Y extends Schema>({
-  children,
-  ...props
-}: Omit<ComponentProps<'form'>, 'onSubmit'> & useYupFormType<Y>) => {
-  const form = useYupForm({ ...props });
+import { useFormType } from './useForm';
 
-  return (
-    <FormikProvider value={form}>
-      <form onSubmit={form.handleSubmit}>
-        <fieldset disabled={form.isSubmitting}>{children}</fieldset>
-      </form>
-    </FormikProvider>
-  );
-};
+export type FormType = {
+  className?: string;
+  form: FormikContextType<FormikValues>;
+} & Pick<useFormType, 'children'> &
+  PropsWithChildren;
 
-export default Form;
+export const Form = ({ children, className, form }: FormType) => (
+  <FormikProvider value={form}>
+    <form onSubmit={form.handleSubmit} className={className}>
+      <fieldset disabled={form.isSubmitting} className={className}>
+        {children}
+      </fieldset>
+    </form>
+  </FormikProvider>
+);

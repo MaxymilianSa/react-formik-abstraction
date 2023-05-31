@@ -1,22 +1,25 @@
-import { ComponentProps, forwardRef } from "react";
-import { useFormikContext } from "formik";
+import { useFormikContext } from 'formik';
+
+import { FormField, useFormField } from '@/components/Form/FormField';
+import Root, { InputUIProps } from '@/components/Form/UI/Input/Input';
 
 type InputProps = {
-	name: string;
-	label: string;
-} & ComponentProps<"input">;
+  label?: string;
+  name: string;
+} & Omit<InputUIProps, 'name'>;
 
-const Input = forwardRef<HTMLInputElement, InputProps>((props, ref) => {
-	const form = useFormikContext();
-	const { value, error } = form.getFieldMeta<string | number | readonly string[] | undefined>(props.name);
+export const Input = ({ ...props }: InputProps) => {
+  const { formFieldProps, childProps } = useFormField(props);
+  const form = useFormikContext();
+  const { value, error } = form.getFieldMeta<string | number | readonly string[] | undefined>(
+    props.name,
+  );
 
-	return (
-		<div>
-			<label htmlFor={props.name}>{props.label}</label>
-			<input {...{ ...props, ref, value, onChange: form.handleChange }} />
-			{error && <p>{error}</p>}
-		</div>
-	);
-});
-
-export default Input;
+  return (
+    <FormField {...formFieldProps}>
+      <Root
+        {...{ ...childProps, value, error, onChange: form.handleChange, onBlur: form.handleBlur }}
+      />
+    </FormField>
+  );
+};

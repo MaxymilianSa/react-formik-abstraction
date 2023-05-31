@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "es2021",
     "lib": [
+      "es5",
       "dom",
       "dom.iterable",
       "esnext"
@@ -16,30 +17,45 @@
       "./src/@types",
       "./node_modules/@types"
     ],
+    "types": [
+      "vite-plugin-svgr/client"
+    ],
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": "src",
-    "incremental": true
+    "baseUrl": ".",
+    "incremental": true,
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@components/*": [
+        "./src/components/*"
+      ],
+      "@providers/*": [
+        "./src/providers/*"
+      ],
+      "@lib/*": [
+        "./src/lib/*"
+      ],
+      "~/*": [
+        "./assets/*"
+      ]
+    }
   },
   "include": [
     "src",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "tailwind.config.ts"
   ],
   "exclude": [
     "node_modules"
   ],
   "moduleResolution": [
     "node_modules",
-    ".next",
     "node"
-  ],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
   ]
 }
