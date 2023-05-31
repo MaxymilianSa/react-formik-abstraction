@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useForm } from '@components/Form/useForm';
 
 import { useStepsContext } from '@/providers/StepsProvider';
@@ -10,11 +11,12 @@ export const useContent = () => {
     countStep,
     lastStep,
   } = useStepsContext();
+  const [showSummary, setSummary] = useState<boolean>(false);
 
   const form = useForm({
     initialValues,
-    onSubmit: () => countStep('next', lastStep),
+    onSubmit: () => (active === lastStep ? setSummary(true) : countStep('next', lastStep)),
   });
 
-  return { form, active };
+  return { form, active, showSummary };
 };

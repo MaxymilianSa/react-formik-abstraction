@@ -27,8 +27,8 @@ export const Actions = ({ className }: ActionsProps) => {
           Go Back
         </Button>
       ) : null}
-      <Button type={active === lastStep ? 'submit' : 'button'} onClick={() => countStep('next', 3)}>
-        Next Step
+      <Button variant={active === lastStep ? 'secondary' : 'primary'}>
+        {active === lastStep ? 'Confirm' : 'Next Step'}
       </Button>
     </div>
   );

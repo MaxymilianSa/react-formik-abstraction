@@ -5,24 +5,30 @@ import { steps } from '@/const/formData';
 import { clsxm } from '@/lib/clsxm';
 
 import { Header } from './components/Header';
+import { Summary } from './steps/Summary';
 import { stepsComponent } from './ContentModel';
 import { useContent } from './useContent';
 
 export const Content = () => {
-  const { active, form } = useContent();
+  const { active, form, showSummary } = useContent();
 
   return (
     <div
       className={clsxm(
-        'relative z-10 top-24 flex w-80 bg-white shadow-base rounded-lg px-6 py-8',
-        'lg:bg-transparent lg:shadow-none lg:pl-0 lg:pr-20 lg:h-auto lg:top-0 lg:pt-10 lg:pb-4 lg:flex-1 lg:flex-col',
+        'absolute z-10 top-24 flex w-80 bg-white shadow-base rounded-lg px-6 py-8',
+        'relative lg:bg-transparent lg:shadow-none lg:pl-0 lg:pr-20 lg:h-auto lg:top-0 lg:pt-10 lg:pb-4 lg:flex-1 lg:flex-col lg:items-stretch',
+        showSummary && 'py-20 lg:pt-40',
       )}
     >
-      <Form {...{ form, className: 'flex flex-col gap-10' }}>
-        <Header {...steps[active].content} />
-        {stepsComponent[active]}
-      </Form>
-      <Actions className="hidden mt-auto px-0 shadow-none z-50 h-auto lg:flex" />
+      {showSummary ? (
+        <Summary />
+      ) : (
+        <Form {...{ form, className: 'flex flex-col gap-10 h-full' }}>
+          <Header {...steps[active].content} />
+          {stepsComponent[active]}
+          <Actions className="fixed lg:relative bottom-0 left-0 mt-auto lg:px-0 shadow-none z-50 lg:h-auto lg:flex" />
+        </Form>
+      )}
     </div>
   );
 };

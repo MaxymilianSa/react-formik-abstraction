@@ -1,7 +1,6 @@
 import { PropsWithChildren } from 'react';
-import { steps } from '@/const/formData';
 
-import { Actions } from '@/components/Layout/components/Actions';
+import { steps } from '@/const/formData';
 import { clsxm } from '@/lib/clsxm';
 
 import { SideBar } from './components/Sidebar';
@@ -17,6 +16,5 @@ export const Layout = ({ children }: PropsWithChildren) => (
       <SideBar {...{ steps }} />
       {children}
     </div>
-    <Actions className="fixed bottom-0 z-50 lg:hidden" />
   </div>
 );

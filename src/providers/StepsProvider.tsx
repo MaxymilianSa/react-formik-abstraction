@@ -12,7 +12,7 @@ type StepsContextProps = {
 export const StepsContext = createContext<StepsContextProps | null>(null);
 
 export const StepsProvider = ({ children }: PropsWithChildren) => {
-  const lastStep = 4;
+  const lastStep = 3;
   const [stepData, setStepData] = useState<StepDataType>({
     active: 0,
     max: 0,

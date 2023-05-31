@@ -11,7 +11,7 @@ export type FormType = {
 
 export const Form = ({ children, className, form }: FormType) => (
   <FormikProvider value={form}>
-    <form onSubmit={form.handleSubmit}>
+    <form onSubmit={form.handleSubmit} className={className}>
       <fieldset disabled={form.isSubmitting} className={className}>
         {children}
       </fieldset>
