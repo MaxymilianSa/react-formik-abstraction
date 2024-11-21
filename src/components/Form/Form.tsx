@@ -1,15 +1,8 @@
-import { PropsWithChildren } from 'react';
-import { FormikContextType, FormikProvider, FormikValues } from 'formik';
+import { FormikProvider } from 'formik';
 
-import { useFormType } from './useForm';
+import type { FormProps } from './form.model';
 
-export type FormType = {
-  className?: string;
-  form: FormikContextType<FormikValues>;
-} & Pick<useFormType, 'children'> &
-  PropsWithChildren;
-
-export const Form = ({ children, className, form }: FormType) => (
+const Form = ({ children, className, form }: FormProps) => (
   <FormikProvider value={form}>
     <form onSubmit={form.handleSubmit} className={className}>
       <fieldset disabled={form.isSubmitting} className={className}>
@@ -18,3 +11,5 @@ export const Form = ({ children, className, form }: FormType) => (
     </form>
   </FormikProvider>
 );
+
+export default Form;

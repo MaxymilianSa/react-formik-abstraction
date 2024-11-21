@@ -19,9 +19,21 @@ Live demo - [open](https://react-formik-abstraction.vercel.app/)
 
 ## Naming Convention
 
-We will use a **PascalCase**. Pascal case is a programming variable naming convention where the first letter of each compound word in a variable is capitalized.
+We will use a **kebab-case**. Kebab case is a programming variable naming convention where all letters are lowercase and words are separated by hyphens.
 
-Here are some examples of kebab case: `ComponentName.tsx` and `OtherComponent.tsx`.
+Here are some examples of kebab case: `component-name.tsx` and `other-component.tsx`.
+
+## Component Structure Convention
+
+When creating a component, we will follow the convention of splitting it into separate files for the controller, model, view, index, and stories. This helps in maintaining a clean and organized codebase.
+
+Here is the structure:
+
+- `component-name.controller.ts` - Contains the logic and state management for the component.
+- `component-name.model.ts` - Defines the data structures and types used by the component.
+- `component-name.view.tsx` - Contains the JSX and styling for the component.
+- `component-name.stories.tsx` - Contains the Storybook stories for the component.
+- `index.ts` - Exports the component and any related hooks or utilities.
 
 ## Directory Structure
 

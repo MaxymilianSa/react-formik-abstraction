@@ -1,15 +1,14 @@
-import { Form } from '@components/Form/Form';
-
-import { Actions } from '@/components/Layout/components/Actions';
-import { steps } from '@/const/formData';
+import Form from '@/components/form';
+import { Actions } from '@/components/layout/components/actions';
+import { steps } from '@/const/form-data';
 import { clsxm } from '@/lib/clsxm';
 
-import { Header } from './components/Header';
-import { Summary } from './steps/Summary';
-import { stepsComponent } from './ContentModel';
-import { useContent } from './useContent';
+import { Header } from './components/header';
+import { useContent } from './content.controller';
+import { stepsComponent } from './content.model';
+import { Summary } from './steps';
 
-export const Content = () => {
+const Content = () => {
   const { active, form, showSummary } = useContent();
 
   return (
@@ -32,3 +31,5 @@ export const Content = () => {
     </div>
   );
 };
+
+export default Content;
