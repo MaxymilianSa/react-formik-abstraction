@@ -1,9 +1,8 @@
-import { StepsProvider } from '@providers/StepsProvider';
+import Content from '@/components/content';
+import Layout from '@/components/layout';
+import { StepsProvider } from '@/providers/steps.provider';
 
-import { Content } from '@/components/Content/Content';
-import { Layout } from '@/components/Layout/Layout';
-
-import './App.css';
+import './global.css';
 
 const App = () => (
   <StepsProvider>

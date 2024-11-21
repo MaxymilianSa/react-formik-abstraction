@@ -1,11 +1,11 @@
 import { PropsWithChildren } from 'react';
 
-import { steps } from '@/const/formData';
+import { steps } from '@/const/form-data';
 import { clsxm } from '@/lib/clsxm';
 
-import { SideBar } from './components/Sidebar';
+import { SideBar } from './components/side-bar';
 
-export const Layout = ({ children }: PropsWithChildren) => (
+const Layout = ({ children }: PropsWithChildren) => (
   <div className="lg:flex lg:py-28 justify-center">
     <div
       className={clsxm(
@@ -18,3 +18,5 @@ export const Layout = ({ children }: PropsWithChildren) => (
     </div>
   </div>
 );
+
+export default Layout;
